@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    tools:context=".tv">
+
+    <TextView
+        android:id="@+id/marqueeText"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:background="#00B8D4"
+        android:ellipsize="marquee"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:gravity="left"
+        android:marqueeRepeatLimit="marquee_forever"
+
+        android:maxLines="1"
+
+        android:scrollHorizontally="true"
+        android:singleLine="true"
+        android:text="加油努力,内分和看看吧魁北克就不会被举报1客户基本就货币基金"
+        android:textColor="#880E4F"
+        android:textSize="26sp"
+        android:textStyle="bold" />
+<TextView
+    android:layout_marginTop="30dp"
+    android:layout_width="400dp"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:text="hello world！"
+    android:drawableStart="@mipmap/ic_launcher"
+    android:drawableBottom="@mipmap/ic_launcher"
+    android:drawableEnd="@mipmap/ic_launcher"
+    android:drawableTop="@mipmap/ic_launcher"
+    />
+
+    <TextView
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:text="hello world!19292929229297777777792"
+        android:gravity="center"
+        android:letterSpacing="0.5"
+        android:lineSpacingExtra="10dp"
+        android:lineSpacingMultiplier="3"
+        android:drawableStart="@mipmap/ic_launcher"
+        android:drawableTop="@mipmap/ic_launcher"
+        android:drawableEnd="@mipmap/ic_launcher"
+        android:drawableBottom="@mipmap/ic_launcher"
+        android:drawablePadding="8dp" />
+</LinearLayout>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 中间大方块 -->
+    <View
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        android:background="#00C853" />
+
+    <!-- 中间第二层 -->
+    <View
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center"
+        android:background="#C51162" />
+
+    <!-- 中间最上层 -->
+    <View
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:background="#FF0000" />
+
+    <TextView
+        android:id="@+id/fra"
+        android:layout_width="160dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="加油，努力"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:background="#212121" />
+
+    <!-- 左上角 -->
+    <View
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_gravity="start|top"
+        android:layout_margin="30dp"
+        android:background="#FFEB3B" />
+
+    <!-- 右上角 -->
+    <View
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_gravity="end|top"
+        android:layout_margin="30dp"
+        android:background="#2196F3" />
+
+    <!-- 左下角 -->
+    <View
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_gravity="start|bottom"
+        android:layout_margin="30dp"
+        android:background="#8BC34A" />
+
+    <!-- 右下角 -->
+    <View
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_gravity="end|bottom"
+        android:layout_margin="30dp"
+        android:background="#9C27B0" />
+
+</FrameLayout>

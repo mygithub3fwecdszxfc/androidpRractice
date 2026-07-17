@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+
+    tools:context=".ui.activity.SplashActivity">
+
+    <TextView
+        android:id="@+id/count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text ="5"
+        android:layout_gravity="end"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="10dp"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        />
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.4"/>
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:src="@drawable/todo"
+        android:scaleType="centerCrop"
+        />
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/font1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="-16dp"
+        android:textSize="20sp"
+        android:text="代办助手"/>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_marginTop="100dp"
+        android:id="@+id/splashAnimation"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        app:lottie_autoPlay="true"
+        app:lottie_fileName="lottile/earth monitoring.lottie"
+        app:lottie_loop="true"
+      />
+
+<!--    <com.airbnb.lottie.LottieAnimationView-->
+
+<!--        android:layout_width="160dp"-->
+<!--        android:layout_height="160dp"-->
+<!--        app:lottie_autoPlay="true"-->
+<!--        app:lottie_rawRes="@raw/zzp"-->
+<!--        app:lottie_loop="true"-->
+<!--    />-->
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.6"/>
+
+    
+
+</LinearLayout>

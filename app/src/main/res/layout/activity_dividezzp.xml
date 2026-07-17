@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- 水平方向分割线演示 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="水平方向分割线演示-zzp"
+            android:textSize="16sp"
+            android:textStyle="italic" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:background="#FFC107"
+            android:divider="@drawable/line"
+            android:orientation="horizontal"
+            android:showDividers="middle"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#90CAF9"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="Item 1" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#90CAF9"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="Item 2" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#90CAF9"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="Item 3" />
+        </LinearLayout>
+
+        <!-- 垂直方向分割线演示 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="垂直方向分割线演示"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#EEEEEE"
+            android:divider="@drawable/line"
+            android:orientation="vertical"
+            android:showDividers="middle|beginning|end"
+            android:padding="8dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#A5D6A7"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="Item 1" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#A5D6A7"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="Item 2" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#A5D6A7"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="Item 3" />
+        </LinearLayout>
+
+        <!-- 属性说明 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="属性说明：
+1. android:divider
+设置分割线的drawable资源
+
+2. android:showDividers
+可选值：middle / beginning / end"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+</ScrollView>
+<!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--    xmlns:tools="http://schemas.android.com/tools"-->
+<!--    android:id="@+id/main"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    android:orientation="vertical"-->
+<!--    tools:context=".dividezzp">-->
+
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="horizontal"-->
+<!--            android:divider="@drawable/line"-->
+<!--            android:showDividers="middle|beginning|end"-->
+
+<!--            >-->
+
+<!--            <View-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_weight="1"-->
+<!--                android:layout_height="100dp"-->
+<!--                android:background="#ff00"-->
+<!--                />-->
+
+<!--            <View-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_weight="1"-->
+<!--                android:layout_height="100dp"-->
+<!--                android:background="#9C27B0"-->
+
+<!--                />-->
+
+<!--            <View-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_weight="2"-->
+<!--                android:layout_height="100dp"-->
+<!--                android:background="#4CAF50"-->
+
+<!--                />-->
+
+<!--        </LinearLayout>-->
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="vertical"-->
+<!--        android:divider="@drawable/line"-->
+<!--        android:showDividers="middle|beginning|end"-->
+<!--        android:gravity="end"-->
+
+<!--        >-->
+<!--        <View-->
+<!--            android:layout_width="100dp"-->
+<!--            android:layout_weight="1"-->
+<!--            android:layout_height="0dp"-->
+<!--            android:background="#ff00"-->
+<!--            />-->
+
+<!--        <View-->
+<!--            android:layout_width="100dp"-->
+<!--            android:layout_weight="1"-->
+<!--            android:layout_height="0dp"-->
+<!--            android:background="#9C27B0"-->
+
+<!--            />-->
+
+<!--        <View-->
+<!--            android:layout_width="100dp"-->
+<!--            android:layout_weight="2"-->
+<!--            android:layout_height="0dp"-->
+<!--            android:background="#4CAF50"-->
+
+<!--            />-->
+
+<!--    </LinearLayout>-->
+
+<!--</LinearLayout>-->

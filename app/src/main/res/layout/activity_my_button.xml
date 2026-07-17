@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".MyButton">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="方式一：XML android:onClick"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:backgroundTint="#64DD17"
+        android:onClick="onButtonClick"
+        android:text="登录"
+        android:textColor="@color/black"
+    />
+
+    <TextView
+        android:id="@+id/clickResultText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="还没有点击"
+        android:textSize="20sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="方式二：Kotlin setOnClickListener"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="登录2"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="方式三：Activity 实现 OnClickListener"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:text="登录zzp" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:text="注册zzp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="圆角按钮示例"
+        android:textSize="16sp" />
+
+<!--    <Button-->
+<!--        android:id="@+id/roundButton"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="圆角按钮"-->
+<!--        android:textColor="@color/white"-->
+<!--        app:backgroundTint="@android:color/holo_red_dark"-->
+<!--        app:cornerRadius="16dp"-->
+<!--        app:strokeColor="#00FF00"-->
+<!--        app:strokeWidth="2dp" />-->
+
+<!--    <Button-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="zhangsan"-->
+<!--        android:background="@drawable/doujiao"-->
+<!--        app:icon="@android:drawable/ic_dialog_info"-->
+<!--        android:enabled="false"/>-->
+
+<!--    选择器-->
+    <view class="androidx.appcompat.widget.AppCompatButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/custom_button_selector"
+        android:text="选择器"
+        />
+</LinearLayout>
