@@ -4,8 +4,8 @@
     <!-- 按下时的背景 -->
     <item android:state_pressed="true">
         <shape android:shape="oval">
-            <solid android:color="#6200EA" />
-            <corners android:radius="8dp" />
+            <solid android:color="#E91E63" />
+            <corners android:radius="20dp" />
         </shape>
     </item>
 

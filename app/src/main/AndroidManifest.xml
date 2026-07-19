@@ -200,9 +200,25 @@
         <activity
             android:name=".broadcastDemo.BroadSimpleActivity"
             android:exported="true"
-            android:windowSoftInputMode="adjustResize"></activity>
+            android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".broadcastOrder.BroadOrderActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".broadcastOrder.DisOrderActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".broadcastOrder.BroadLocalActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".WeekTextInputActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".projectPractice.IntroduceActivity"
             android:exported="true"
             android:windowSoftInputMode="adjustResize">
             <intent-filter>
@@ -212,11 +228,27 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".broadcastOrder.DisOrderActivity"
+            android:name=".projectPractice.MyLoginActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".broadcastOrder.BroadLocalActivity"
+            android:name=".projectPractice.MyRegisterActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".projectPractice.HomeActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".projectPractice.MyTabLayoutActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".projectPractice.RecyclerViewActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".projectPractice.HandlerTestActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
     </application>

@@ -45,21 +45,21 @@
         android:layout_height="50dp"
         android:layout_below="@id/box"
         android:layout_alignLeft="@id/box"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="50dp"
         android:background="#11C56B" />
 
+
+    <!-- 蓝色方块上方红色方块 -->
     <View
         android:layout_width="100dp"
         android:layout_height="50dp"
         android:layout_above="@id/box"
+  android:layout_marginEnd="30dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginBottom="42dp"
         android:layout_toLeftOf="@id/box"
-        android:layout_marginTop="30dp"
-        android:background="#11C56B" />
+        android:background="#E91E63" />
 
-
-
-
-    <!-- 蓝色方块上方红色方块 -->
     <View
         android:layout_above="@id/box"
         android:layout_centerHorizontal="true"

@@ -26,7 +26,7 @@
             android:background="#FFC107"
             android:divider="@drawable/line"
             android:orientation="horizontal"
-            android:showDividers="middle"
+            android:showDividers="middle|beginning|end"
             android:padding="10dp">
 
             <TextView

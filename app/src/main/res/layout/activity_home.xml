@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".projectPractice.HomeActivity">
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentContainerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        />
+
+    <Button
+        android:id="@+id/btnJump"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="跳转按钮---->顶部导航TabLayout" />
+
+
+    <Button
+        android:id="@+id/btnJump1"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="跳转按钮---->Handler" />
+    <!--新建一个menu/bottom_nav_bar.xml文件，用于定义底部导航栏的图标和标题-->
+<!--    //定义选择器,选中未选中-->
+<!--    <selector xmlns:android="http://schemas.android.com/apk/res/android">-->
+<!--        <item android:color="#1aad19" android:state_selected="true"/>-->
+<!--        <item android:color="#DDC917" android:state_selected="false"/>-->
+<!--    </selector>-->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:itemIconTint="@drawable/color_bottom_bar"
+        app:itemTextColor="@drawable/color_bottom_bar"
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/bottom_nav_bar1"
+        />
+
+
+</LinearLayout>

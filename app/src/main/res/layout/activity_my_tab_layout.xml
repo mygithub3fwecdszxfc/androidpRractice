@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".projectPractice.MyTabLayoutActivity">
+    <!-- tabGravity与tabMode配合使用，tabGravity表示标签的对齐方式，tabMode表示标签的模式 -->
+<!--    <com.google.android.material.tabs.TabLayout-->
+<!--        app:tabGravity="center"-->
+<!--        app:tabMode="scrollable"-->
+<!--        app:tabTextColor="#03A9F4"-->
+<!--        app:tabSelectedTextColor="#00ff00"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:id="@+id/tabLayout">-->
+<!--        <com.google.android.material.tabs.TabItem-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Tab 1"/>-->
+<!--        <com.google.android.material.tabs.TabItem-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Tab 2"/>-->
+<!--        <com.google.android.material.tabs.TabItem-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Tab 3"/>-->
+<!--        <com.google.android.material.tabs.TabItem-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Tab 4"/>-->
+<!--    </com.google.android.material.tabs.TabLayout>-->
+
+
+
+<!--    上面是双标签静态写死，下面学习动态加载-->
+    <com.google.android.material.tabs.TabLayout
+        app:tabGravity="center"
+        app:tabMode="scrollable"
+        app:tabTextColor="#FF5722"
+        app:tabSelectedTextColor="#FFEB3B"
+        android:id="@+id/tabLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/myViewPager2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+
+</LinearLayout>

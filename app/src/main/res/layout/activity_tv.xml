@@ -33,12 +33,16 @@
     android:layout_width="400dp"
     android:layout_height="wrap_content"
     android:gravity="center"
-    android:text="hello world！"
-    android:drawableStart="@mipmap/ic_launcher"
-    android:drawableBottom="@mipmap/ic_launcher"
-    android:drawableEnd="@mipmap/ic_launcher"
-    android:drawableTop="@mipmap/ic_launcher"
-    />
+    android:text="hello world！kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk"
+    android:maxLines="3"
+    android:lines="2"
+    android:ellipsize="end"
+
+    android:drawableStart="@mipmap/ic_launcher"/>
+<!--    android:drawableBottom="@mipmap/ic_launcher"-->
+<!--    android:drawableEnd="@mipmap/ic_launcher"-->
+<!--    android:drawableTop="@mipmap/ic_launcher"-->
+
 
     <TextView
         android:layout_width="400dp"

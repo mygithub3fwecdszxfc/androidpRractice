@@ -50,7 +50,7 @@ dependencies {
     implementation("com.github.GrenderG:Toasty:1.5.2")
     implementation("com.github.bumptech.glide:glide:5.0.7")
     implementation("com.airbnb.android:lottie:6.4.0")
-    implementation("com.google.android.material:material:1.11.0")
+    implementation("com.google.android.material:material:1.12.0")
     implementation("com.guolindev.permissionx:permissionx:1.8.0")
     implementation("androidx.localbroadcastmanager:localbroadcastmanager:1.1.0")
 }

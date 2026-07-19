@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center"
+    android:showDividers="end"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:divider="@android:color/holo_green_dark"
+        android:showDividers="middle"
+        android:text="Hello World!"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#FF5722"
+        app:cornerRadius="80dp"
+        app:strokeColor="#03A9F4"
+        app:strokeWidth="5dp"
+        app:icon="@drawable/doujiao"
+        android:background="@drawable/custom_button_selector"
+        android:text="Click Me"/>
+</LinearLayout>

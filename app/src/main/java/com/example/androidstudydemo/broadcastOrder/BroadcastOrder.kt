@@ -12,7 +12,7 @@ class BroadcastOrder: BroadcastReceiver() {
             "无序广播" -> {
                 // 处理无序广播
 
-                Toasty.success(context!!,"无序广播",Toasty.LENGTH_SHORT).show()
+                Toasty.success(context!!,"无序广播,${intent.getStringExtra("nickname")}",Toasty.LENGTH_SHORT).show()
             }
             "有序广播" -> {
                 val bundle = getResultExtras(true)

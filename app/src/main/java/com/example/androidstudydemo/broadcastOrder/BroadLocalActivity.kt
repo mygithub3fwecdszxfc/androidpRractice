@@ -49,6 +49,11 @@ class BroadLocalActivity : AppCompatActivity() {
 
         // 注册本地广播
         registerLocalReceiver()
+        binding.btnLocal.setOnClickListener {
+            val intent = Intent("无序广播")
+            intent.putExtra("nickname", "无序广播巴啦啦小魔仙全身变")
+            localBroadcastManager.sendBroadcast(intent)
+        }
     }
 
     /**
@@ -59,6 +64,7 @@ class BroadLocalActivity : AppCompatActivity() {
         val filter = IntentFilter()
         filter.addAction("无序广播")
         filter.addAction("有序广播")
+        //添加一些数据
 
         // 本地广播专属注册方法
         localBroadcastManager.registerReceiver(localReceiver, filter)
