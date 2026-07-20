@@ -42,6 +42,7 @@ class MainActivity123 : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main123)
         tvResult = findViewById(R.id.tv_result)
+        // 页面创建时绑定远程AIDL服务
         bindRemoteAidlService()
     }
 

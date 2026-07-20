@@ -4,5 +4,5 @@ package com.example.androidstudydemo.projectPractice
 data class Book(
     val title: String,       // 书名
     val author: String,      // 作者
-    val coverResId: Int      // 封面图片资源 ID
+    val coverUrl: String      // 封面图片资源url
 )

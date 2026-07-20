@@ -244,13 +244,50 @@
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".projectPractice.RecyclerViewActivity"
-            android:exported="false"
-            android:windowSoftInputMode="adjustResize" />
-        <activity
             android:name=".projectPractice.HandlerTestActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".projectPractice.BroadCastStaticActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".projectPractice.BroadcastDynamicActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+
+        <receiver
+            android:name=".projectPractice.StaticReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="静态广播" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".projectPractice.BroadCastOrderActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".projectPractice.ServiceActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+
+        <service
+            android:name=".projectPractice.MyService"
+            android:enabled="true"
+            android:exported="false" />
+
+        <provider
+            android:name=".projectPractice.BookProvider"
+            android:authorities="com.example.androidstudydemo.projectPractice.bookprovider"
+            android:exported="true" />
+
+        <activity
+            android:name=".projectPractice.ContentProviderActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+
     </application>
 
 </manifest>
