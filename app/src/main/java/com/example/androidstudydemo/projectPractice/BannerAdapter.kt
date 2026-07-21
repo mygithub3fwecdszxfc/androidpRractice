@@ -1,11 +1,17 @@
-package com.example.androidstudydemo.projectPractice
-
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.androidstudydemo.databinding.BannerItemBinding
+import com.example.androidstudydemo.projectPractice.BannerAdapter
+import com.example.androidstudydemo.projectPractice.Book
 
+// 书籍数据实体类，和你项目Book保持一致
+data class Book(
+    val bookName: String,
+    val author: String,
+    val imgUrl: String
+)
 
 class BannerAdapter(private val bannerList: List<Book>) :
     RecyclerView.Adapter<BannerAdapter.BannerVH>() {

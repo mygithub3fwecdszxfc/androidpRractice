@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 浅暖米色底色，和页面渐变统一 -->
+    <solid android:color="#FFF0E0CC"/>
+    <!-- 超大圆角，胶囊效果 -->
+    <corners android:radius="999dp"/>
+</shape>

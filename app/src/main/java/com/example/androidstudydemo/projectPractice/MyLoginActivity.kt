@@ -48,6 +48,13 @@ class MyLoginActivity : AppCompatActivity() {
             binding.accountLayout.error = accountError
             binding.passwordLayout.error = passwordError
 
+            // 判断是否勾选协议
+            if(!binding.cbAgree.isChecked){
+                Toasty.info(this, "请先同意用户协议与隐私政策", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
+
+
             // 账号和密码都不为空后，执行模拟登录。
             if (accountError == null && passwordError == null) {
                 Toasty.success(this, "模拟登录成功，跳转到主页", Toast.LENGTH_SHORT).show()
@@ -59,6 +66,19 @@ class MyLoginActivity : AppCompatActivity() {
         binding.tvRegister.setOnClickListener {
             startActivity(Intent(this, MyRegisterActivity::class.java))
             finish()
+        }
+
+        // 初始化：页面打开按钮禁用
+        binding.btnLogin.isEnabled = false
+        // 监听复选框勾选状态
+        binding.cbAgree.setOnCheckedChangeListener { _, isChecked ->
+            binding.btnLogin.isEnabled = isChecked
+            // 切换按钮样式，禁用时变淡
+            if(isChecked){
+                binding.btnLogin.alpha = 1f
+            }else{
+                binding.btnLogin.alpha = 0.5f
+            }
         }
     }
 

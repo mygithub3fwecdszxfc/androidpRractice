@@ -25,30 +25,30 @@ class HomeActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        // 点击首页中间的按钮，跳转到顶部 TabLayout 页面。
-        binding.btnJump.setOnClickListener {
-            val intent = Intent(this, MyTabLayoutActivity::class.java)
-            startActivity(intent)
-        }
-
-        binding.btnJump1.setOnClickListener {
-            val intent = Intent(this, HandlerTestActivity::class.java)
-            startActivity(intent)
-        }
-
-        binding.btnJump2.setOnClickListener {
-            val intent = Intent(this, BroadcastDynamicActivity::class.java)
-            startActivity(intent)
-        }
-        binding.btnJump3.setOnClickListener {
-            val intent = Intent(this, ServiceActivity::class.java)
-            startActivity(intent)
-        }
-
-        binding.btnJump4.setOnClickListener {
-            val intent = Intent(this, ContentProviderActivity::class.java)
-            startActivity(intent)
-        }
+//        // 点击首页中间的按钮，跳转到顶部 TabLayout 页面。
+//        binding.btnJump.setOnClickListener {
+//            val intent = Intent(this, MyTabLayoutActivity::class.java)
+//            startActivity(intent)
+//        }
+//
+//        binding.btnJump1.setOnClickListener {
+//            val intent = Intent(this, HandlerTestActivity::class.java)
+//            startActivity(intent)
+//        }
+//
+//        binding.btnJump2.setOnClickListener {
+//            val intent = Intent(this, BroadcastDynamicActivity::class.java)
+//            startActivity(intent)
+//        }
+//        binding.btnJump3.setOnClickListener {
+//            val intent = Intent(this, ServiceActivity::class.java)
+//            startActivity(intent)
+//        }
+//
+//        binding.btnJump4.setOnClickListener {
+//            val intent = Intent(this, ContentProviderActivity::class.java)
+//            startActivity(intent)
+//        }
 
 
 

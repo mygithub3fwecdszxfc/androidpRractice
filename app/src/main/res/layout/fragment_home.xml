@@ -1,15 +1,136 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bg_introduce_gradient"
     tools:context=".projectPractice.HomeFragment">
 
-
-    <TextView
-        android:layout_centerInParent="true"
-        android:layout_width="wrap_content"
+    <!-- 顶部标题+搜索栏 -->
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="这是首页Fragment" />
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="16dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="8dp">
 
-</RelativeLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="书页拾光"
+            android:fontFamily="@font/luan"
+            android:textColor="#FF6D00"
+            android:textSize="24sp"
+            android:textStyle="bold"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/searchLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="16dp"
+            app:startIconDrawable="@drawable/ic_search_24"
+            app:startIconTint="#00B8D4">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etSearch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="搜索书籍、作者"
+                android:inputType="text"
+                android:maxLines="1"
+                android:imeOptions="actionSearch"/>
+        </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+
+    <!-- 整体可滚动容器（页面内容多需要滑动） -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="20dp">
+
+            <!-- ========== Banner轮播 ViewPager2 + 圆点指示器 ========== -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="8dp"
+                android:orientation="vertical">
+
+                <androidx.viewpager2.widget.ViewPager2
+                    android:id="@+id/vpBanner"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"/>
+
+                <!-- 底部小圆点 -->
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/tabDot"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="6dp"
+                    app:tabIndicatorHeight="0dp"
+                    app:tabPaddingStart="6dp"
+                    app:tabPaddingEnd="6dp"/>
+            </LinearLayout>
+
+
+
+<!--            &lt;!&ndash; ========== 最近阅读 横向书单 ========== &ndash;&gt;-->
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginStart="16dp"-->
+<!--                android:layout_marginTop="24dp"-->
+<!--                android:text="📖 最近阅读"-->
+<!--                android:textColor="#4E342E"-->
+<!--                android:textSize="17sp"-->
+<!--                android:textStyle="bold"/>-->
+
+<!--            <androidx.recyclerview.widget.RecyclerView-->
+<!--                android:id="@+id/rvRecent"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="8dp"-->
+<!--                android:clipToPadding="false"-->
+<!--                android:paddingHorizontal="12dp"-->
+<!--                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"-->
+<!--                app:layoutManagerOrientation="horizontal"/>-->
+
+<!--            &lt;!&ndash; ========== 热门推荐 3列网格书单 ========== &ndash;&gt;-->
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginStart="16dp"-->
+<!--                android:layout_marginTop="24dp"-->
+<!--                android:text="🔥 热门推荐"-->
+<!--                android:textColor="#4E342E"-->
+<!--                android:textSize="17sp"-->
+<!--                android:textStyle="bold"/>-->
+
+<!--            <androidx.recyclerview.widget.RecyclerView-->
+<!--                android:id="@+id/rvHot"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="8dp"-->
+<!--                android:clipToPadding="false"-->
+<!--                android:nestedScrollingEnabled="false"-->
+<!--                android:paddingHorizontal="12dp"-->
+<!--                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"-->
+<!--                app:layoutManagerSpanCount="3"/>-->
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

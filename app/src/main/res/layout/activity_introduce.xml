@@ -3,74 +3,150 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
-    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:gravity="center"
     android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:background="@drawable/bg_introduce_gradient"
     tools:context=".projectPractice.IntroduceActivity">
-    <TextView
-        android:id="@+id/countDown"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+
+<!--    android:focusable="true"-->
+<!--    让控件可以获取焦点，保证点击水波纹效果正常显示。-->
+<!--    android:foreground="?attr/selectableItemBackgroundBorderless"-->
+<!--    无边框点击水波纹样式，点击圆环任意位置时，会出现圆形淡色波纹反馈，提升点击交互感-->
+
+    <FrameLayout
+        android:id="@+id/countDownContainer"
+        android:layout_width="52dp"
+        android:layout_height="52dp"
         android:layout_gravity="end"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="10dp"
-        android:textSize="40sp"
-        android:text="5"/>
+        android:clickable="true">
+
+        <!-- 底层环形进度条控件 -->
+        <com.google.android.material.progressindicator.CircularProgressIndicator
+            android:id="@+id/circularProgress"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            app:indicatorColor="#FFB36B"
+            app:indicatorSize="52dp"
+            app:trackColor="#22000000"
+            app:trackCornerRadius="4dp"
+            app:trackThickness="3dp" />
+
+        <!-- 顶层居中倒计时数字 -->
+        <TextView
+            android:id="@+id/countDown"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="5"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+    </FrameLayout>
+
     <Space
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.2"
-        />
+        android:layout_weight="0.2" />
 
     <ImageView
         android:layout_width="150dp"
         android:layout_height="150dp"
-        android:src="@drawable/book"
         android:scaleType="centerCrop"
-       />
+        android:src="@drawable/book" />
+
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center_vertical">
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
         <TextView
             android:id="@+id/tvText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="书页拾光"
-            android:textSize="24sp"
-            android:textColor="#000000"
             android:fontFamily="@font/book"
-            />
+            android:text="书页拾光"
+            android:textColor="#000000"
+            android:textSize="24sp" />
+
         <com.airbnb.lottie.LottieAnimationView
             android:layout_width="40dp"
             android:layout_height="40dp"
-            app:lottie_fileName="lottile/ReadBook.json"
             app:lottie_autoPlay="true"
-            app:lottie_loop="true"
-            />
+            app:lottie_fileName="lottile/ReadBook.json"
+            app:lottie_loop="true" />
 
     </LinearLayout>
-<!--页面打开时，副标题初始不可见：-->
-<!--    android:alpha="0"-->
-<!--    android:translationY="20dp"-->
+    <!--页面打开时，副标题初始不可见：-->
+    <!--    android:alpha="0"-->
+    <!--    android:translationY="20dp"-->
+    <View
+        android:layout_width="140dp"
+        android:layout_height="1dp"
+        android:layout_marginVertical="10dp"
+        android:background="#DDCFC0"/>
     <TextView
         android:id="@+id/tvSubtitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:alpha="0"
-        android:translationY="20dp"
         android:text="在字里行间，遇见精彩故事"
-        android:textColor="#777777"
-        android:textSize="14sp" />
+        android:layout_marginBottom="20dp"
+        android:textColor="#FFAB00"
+        android:textSize="14sp"
+        android:translationY="20dp" />
 
+    <!-- 功能标签 -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/tag_bg"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="4dp"
+            android:text="海量好书"
+            android:textColor="#8D6E63"
+            android:textSize="11sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/tag_bg"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="4dp"
+            android:text="个性推荐"
+            android:textColor="#8D6E63"
+            android:textSize="11sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/tag_bg"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="4dp"
+            android:text="离线阅读"
+            android:textColor="#8D6E63"
+            android:textSize="11sp" />
+
+    </LinearLayout>
 
     <Space
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.4"
-        />
+        android:layout_weight="0.4" />
 
 </LinearLayout>

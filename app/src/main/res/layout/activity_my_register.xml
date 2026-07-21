@@ -7,6 +7,7 @@
     android:gravity="center"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bg_introduce_gradient"
     tools:context=".projectPractice.MyRegisterActivity">
 
     <Space
@@ -92,8 +93,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="注册"
+        app:backgroundTint="#FFCFA0"
         android:textStyle="bold"
-        android:backgroundTint="#1976D2"
         app:cornerRadius="12dp"
         />
 <TextView

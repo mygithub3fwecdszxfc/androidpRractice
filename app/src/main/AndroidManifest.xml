@@ -287,7 +287,10 @@
             android:name=".projectPractice.ContentProviderActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
-
+        <activity
+            android:name=".projectPractice.CheckBoxActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
     </application>
 
 </manifest>
