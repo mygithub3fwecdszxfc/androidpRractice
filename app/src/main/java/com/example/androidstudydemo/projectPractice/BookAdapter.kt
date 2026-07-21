@@ -9,7 +9,14 @@ import com.example.androidstudydemo.databinding.ItemBookBinding
 
 // RecyclerView 的适配器，负责创建和绑定书籍条目,private val bookList: List<Book> 构造参数
 //外部页面（Activity/Fragment）创建 BookAdapter 时，把书籍数据列表传进来；
-class BookAdapter(private val bookList: List<Book>) : RecyclerView.Adapter<BookAdapter.BookViewHolder>() {
+class BookAdapter(private var bookList: List<Book>) : RecyclerView.Adapter<BookAdapter.BookViewHolder>() {
+
+    // 【新增】分类页切换标签后调用这个方法，替换当前显示的书籍列表。
+    // notifyDataSetChanged() 会通知 RecyclerView 重新读取数据并刷新界面。
+    fun updateBooks(newBookList: List<Book>) {
+        bookList = newBookList
+        notifyDataSetChanged()
+    }
 
 //bingding来源：在 onCreateViewHolder 中加载布局得到 binding，再传入 ViewHolder：
     //继承：把条目布局的根 View 交给父类，让 RecyclerView 识别这条目的视图，用于复用、绘制、回收。

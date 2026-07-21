@@ -67,6 +67,14 @@
                 android:layout_marginHorizontal="16dp"
                 android:layout_marginTop="8dp"
                 android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:text="本周推荐榜"
+                    android:textColor="#4E342E"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
 
                 <androidx.viewpager2.widget.ViewPager2
                     android:id="@+id/vpBanner"
@@ -74,16 +82,80 @@
                     android:layout_height="180dp"/>
 
                 <!-- 底部小圆点 -->
+<!--                app:tabIndicatorHeight="2dp"-->
+<!--                app:tabIndicatorColor="#FF6D00"-->
+<!--                app:tabPaddingStart="6dp"-->
+<!--                app:tabPaddingEnd="6dp"-->
                 <com.google.android.material.tabs.TabLayout
                     android:id="@+id/tabDot"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="6dp"
-                    app:tabIndicatorHeight="0dp"
-                    app:tabPaddingStart="6dp"
-                    app:tabPaddingEnd="6dp"/>
+               />
             </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="每日书摘"
+                android:textColor="#4E342E"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="2dp"
+                app:strokeColor="#F0D8C2"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:id="@+id/tvDailyQuote"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="人只要一想到生活的美好，就会有继续生活下去的勇气。"
+                        android:textColor="#4E342E"
+                        android:textSize="16sp"
+                        android:lineSpacingExtra="4dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_marginTop="10dp"
+                        android:text="—— 今日阅读摘录"
+                        android:textColor="#8A6A55"
+                        android:textSize="13sp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="新书上架"
+                android:textColor="#4E342E"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvNewBooks"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:clipToPadding="false"
+                android:nestedScrollingEnabled="false"
+                android:paddingHorizontal="2dp" />
 
 
 
