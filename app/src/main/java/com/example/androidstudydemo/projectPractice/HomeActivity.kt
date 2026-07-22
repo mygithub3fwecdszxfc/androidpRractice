@@ -2,6 +2,7 @@ package com.example.androidstudydemo.projectPractice
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -12,7 +13,9 @@ import com.example.androidstudydemo.databinding.ActivityHomeBinding
 import es.dmoral.toasty.Toasty
 
 class HomeActivity : AppCompatActivity() {
+
     private lateinit var fragments:List<Fragment>
+
     private var currentFragment: Fragment? = null
     private lateinit var binding: ActivityHomeBinding
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -25,6 +28,8 @@ class HomeActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
+
 //        // 点击首页中间的按钮，跳转到顶部 TabLayout 页面。
 //        binding.btnJump.setOnClickListener {
 //            val intent = Intent(this, MyTabLayoutActivity::class.java)
@@ -69,6 +74,7 @@ class HomeActivity : AppCompatActivity() {
                 R.id.navigation_category -> {
                     Toasty.success(this, "Category分类", Toasty.LENGTH_SHORT).show()
                     showFragment(2)
+                    Log.d("切换Fragment", "切换到了category")
                     true
                 }
                 R.id.navigation_person -> {
@@ -84,7 +90,7 @@ class HomeActivity : AppCompatActivity() {
     }
 
     // FragmentManager：用于Fragment的增删替换操作，它就是Fragment事务管理器
-    private fun showFragment(position: Int) {
+    private fun showFragment1(position: Int) {
         // 1. 获取系统自带的Fragment事务管理器（用于Fragment的增删替换操作）
         supportFragmentManager.beginTransaction()
             // 2. replace操作：替换容器内的Fragment
@@ -97,7 +103,7 @@ class HomeActivity : AppCompatActivity() {
     //replace方法节省内存，但是会重新加载Fragment，无法保存状态
     //因此引入hide+show
 
-    private fun showFragmentHideShow(position: Int) {
+    private fun showFragment(position: Int) {
         // 获取目标Fragment对象
         val targetFragment = fragments[position]
         // 开启Fragment事务，所有增删显隐操作都要依托事务执行
@@ -121,4 +127,7 @@ class HomeActivity : AppCompatActivity() {
         // 6. 更新全局标记，记录当前正在展示的Fragment
         currentFragment = targetFragment
     }
+
+
+
 }

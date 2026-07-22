@@ -8,39 +8,29 @@
     android:background="@drawable/bg_introduce_gradient"
     tools:context=".projectPractice.CategoryFragment">
 
-    <!-- 【新增】分类页标题。底部导航已经负责进入分类页，这里展示页面标题即可。 -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="8dp"
         android:text="书籍分类"
         android:textColor="#4E342E"
         android:textSize="24sp"
         android:textStyle="bold" />
 
-    <!--
-        【新增】分类标签栏。
-        每个 Tab 代表一个筛选条件，点击后由 CategoryFragment 过滤书籍。
-    -->
+<!--TabLayout首部导航栏-->
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/categoryTabs"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:contentDescription="书籍分类筛选"
+        android:layout_marginTop="30dp"
         app:tabMode="scrollable" />
 
-    <!--
-        【新增】分类结果列表。
-        layout_height 使用 0dp + weight=1，让列表占据剩余空间并独立滚动。
-    -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/categoryRecyclerView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:clipToPadding="false"
         android:padding="8dp" />
 
 </LinearLayout>

@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.androidstudydemo.databinding.FragmentBookShelfBinding
+import es.dmoral.toasty.Toasty
 
 class BookShelfFragment : Fragment() {
 
@@ -20,7 +21,6 @@ class BookShelfFragment : Fragment() {
     ): View {
         binding = FragmentBookShelfBinding.inflate(inflater, container, false)
 
-        // 【修改】书架页改为使用公共数据源，和分类页保持同一批书籍。
         bookAdapter = BookAdapter(BookRepository.allBooks)
         binding.bookRecyclerView.adapter = bookAdapter
 
@@ -29,7 +29,39 @@ class BookShelfFragment : Fragment() {
             requireContext(),
             2
         )
+        binding.etSearch.setOnEditorActionListener { _, actionId, _ ->
+            if (actionId == android.view.inputmethod.EditorInfo.IME_ACTION_SEARCH) {
+                // 获取输入关键词执行搜索
+                val keyword = binding.etSearch.text.toString()
+                searchBook(keyword)
+                // 返回true：消费本次事件，不再默认执行收起键盘以外操作
+                true
+            } else {
+                false
+            }
+        }
+
 
         return binding.root
+    }
+//模糊搜索
+
+    private fun searchBook(query: String){
+        // 多余空格
+        val realQuery = query.trim()
+        // 根据条件筛选书籍
+        val filterBook = BookRepository.allBooks.filter {
+            it.title.contains(realQuery) || it.author.contains(realQuery)
+        }
+
+        if (filterBook.isNotEmpty()) {
+            // 存在匹配书籍，更新列表展示筛选结果
+            bookAdapter.updateBooks(filterBook)
+        } else {
+            // 没有找到任何匹配书籍，弹出提示
+            Toasty.warning(requireContext(), "未找到相关书籍", Toasty.LENGTH_SHORT).show()
+            // 恢复显示全部书籍
+            bookAdapter.updateBooks(BookRepository.allBooks)
+        }
     }
 }

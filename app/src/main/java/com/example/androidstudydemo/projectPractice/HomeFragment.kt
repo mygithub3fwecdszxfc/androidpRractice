@@ -14,6 +14,8 @@ import com.example.androidstudydemo.R
 import com.example.androidstudydemo.databinding.BannerItemBinding
 import com.example.androidstudydemo.databinding.FragmentHomeBinding
 import com.google.android.material.tabs.TabLayoutMediator
+import java.util.Calendar
+import java.util.Random
 
 /**
  * 首页Fragment
@@ -21,6 +23,24 @@ import com.google.android.material.tabs.TabLayoutMediator
  * 实现功能：Banner自动轮播、页面可见时滚动、页面不可见暂停滚动
  */
 class HomeFragment : Fragment() {
+    //初始化多条阅读摘录
+    private val quoteList=listOf(
+        "人只要一想到生活的美好，就会有继续生活下去的勇气。",
+        "活在这珍贵的人间，太阳强烈，水波温柔。",
+        "凡是过往，皆为序章。",
+        "万物皆有裂痕，那是光照进来的地方。",
+        "一定要爱着点什么，恰似草木对光阴的钟情。",
+        "生活不可能像你想象得那么好，但也不会像你想象得那么糟。",
+        "我们读所有的书，最终的目的都是读到自己。",
+        "且视他人之疑目如盏盏鬼火，大胆去走你的夜路。",
+        "允许自己做自己，允许别人做别人。",
+        "山海自有归期，风雨自有相逢。",
+        "对未来真正的慷慨，是把一切献给现在。",
+        "不乱于心，不困于情，不畏将来，不念过往。",
+        "世界上只有一种英雄主义，就是看清生活真相之后依然热爱生活。",
+        "生命的意义，在于人与人的相互照亮。",
+        "慢慢理解世界，慢慢更新自己。"
+    )
     // 主线程Handler，用于实现定时自动轮播
     private val autoScrollHandler = Handler(Looper.getMainLooper())
 
@@ -104,6 +124,9 @@ class HomeFragment : Fragment() {
     ): View {
         // 使用ViewBinding加载Fragment布局
         binding = FragmentHomeBinding.inflate(inflater, container, false)
+        // 随机获取一条阅读摘录
+        val randomQuote = quoteList.random()
+        binding.tvDailyQuote.text = getDailyQuote()
         return binding.root
     }
 
@@ -172,7 +195,7 @@ class HomeFragment : Fragment() {
         ) { tab, position ->
             tab.text = "" // 不显示文字，只保留圆点指示器
         }.attach()
-
+//recyclerView设置
         binding.rvNewBooks.layoutManager = GridLayoutManager(
             requireContext(),
             2
@@ -209,5 +232,22 @@ class HomeFragment : Fragment() {
         // 清空ViewPager适配器，解除引用
         binding.vpBanner.adapter = null
         super.onDestroyView()
+    }
+
+
+    private fun getDailyQuote(): String {
+        // 获取系统日历实例，代表当前手机时间
+        val calendar = Calendar.getInstance().apply {
+            set(Calendar.HOUR_OF_DAY, 0)
+            set(Calendar.MINUTE, 0)
+            set(Calendar.SECOND, 0)
+            set(Calendar.MILLISECOND, 0)
+        }
+
+        // timeInMillis = 从1970-01-01到当日零点的毫秒数，long类型，用作随机种子
+        val seed = calendar.timeInMillis
+        val random = Random(seed)
+        val index = random.nextInt(quoteList.size)
+        return quoteList[index]
     }
 }

@@ -15,15 +15,12 @@
         android:orientation="vertical"
         android:padding="8dp">
 
-        <!-- 书籍封面 -->
         <ImageView
             android:id="@+id/bookCover"
             android:layout_width="match_parent"
             android:layout_height="180dp"
             android:scaleType="centerCrop"
             android:src="@drawable/book" />
-
-        <!-- 书籍名称 -->
         <TextView
             android:id="@+id/tvBookTitle"
             android:layout_width="match_parent"
@@ -33,8 +30,6 @@
             android:maxLines="1"
             android:textSize="16sp"
             android:textStyle="bold" />
-
-        <!-- 作者名称 -->
         <TextView
             android:id="@+id/tvBookAuthor"
             android:layout_width="match_parent"

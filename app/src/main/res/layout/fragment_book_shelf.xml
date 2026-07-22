@@ -1,8 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
+
+
+    <!-- 顶部标题+搜索栏 -->
+    <LinearLayout
+        android:id="@+id/searchInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="16dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="书页拾光"
+            android:fontFamily="@font/luan"
+            android:textColor="#FF6D00"
+            android:textSize="24sp"
+            android:textStyle="bold"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/searchLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="16dp"
+            app:startIconDrawable="@drawable/ic_search_24"
+            app:startIconTint="#00B8D4">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etSearch"
+                android:layout_width="match_parent"
+                android:imeOptions="actionSearch"
+                android:layout_height="wrap_content"
+                android:hint="搜索书籍、作者"
+                android:inputType="text"
+                android:maxLines="1"
+               />
+        </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
 
     <!-- 书架列表，具体显示几列由 BookShelfFragment 中的 GridLayoutManager 决定。 -->
     <androidx.recyclerview.widget.RecyclerView
